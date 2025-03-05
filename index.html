@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Modelo de Regresión</title>
+    <title>Perfil Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('img/fondo.jpg');
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: justify;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+                        url('img/header.jpg'); /* Reemplaza con el nombre de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Asegura que el texto sea visible */
+            padding: 40px 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            background: #92acc5;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #0056b3;
+        }
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #92acc5;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .skill img {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            margin-bottom: 5px;
+        }
+        .education {
+            text-align: center;
+        }
+        .job_text {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body>
-    <h1>Predicción con Gradio</h1>
-    <iframe src="https://55fbff621f80daa301.gradio.live" width="100%" height="600px" style="border:none;"></iframe>
+    <div class="container">
+        <header>
+            <h1>Diego Nicolás Ávila Moreno</h1>
+            <p>Científico de Datos</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="personal.html">Perfil Profesional</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="intereses.html">Intereses</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <section id="skills">
+            <div>
+                <h1>Modelos de Regresión en Predicción de Incremento Salarial Basado en Experiencia</h1>
+            </div>            
+        </section>
+        <section id="skills">
+            <h2>La Experiencia laboral y el Salario ¿Es posible predecir mis futuras ganancias por mi trabajo?</h2>
+            <div class="skills-list">
+                <p>Normalmente en el mundo laboral existe un constante estudio de como impacta la experiencia laboral a la retribución salarial. Siempre se ha tenido la percepción de que a medida que la experiencia de un profesional va en aumento de igual manera su salario. Alrededor de la ciencia de datos, este comportamiento ha sido evaluado en varias ocasiones y dentro de las practicas más comunes de estudio se han aplicado soluciones matemáticas como son las regresiones lineales y regresiones de naturaleza polinómica.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>¿En qué consisten las regresiones?</h2>
+            <div class="skills-list">
+                <p>Para empezar, vamos a identificar que es una regresión. Las regresiones son un comportamiento multivariado, más exactamente entre dos variables que permiten identificar como una de ellas impacta a la otra. Al generar regresiones lo que hacemos es identificar como el cambio de una variable puede afectar el comportamiento de una segunda variable. Dicha variable inicial es conocida como variable independiente pues toma valores iniciales que al compararse a la segunda variable conocida como variable dependiente genera cambios sobre dicha variable.</p>
+                <p>El comportamiento con respecto al cambio de las dos variables tiene infinitas posibilidades. Puede que, al haber un incremento de una primera variable, la segunda también aumente con igual magnitud, lo cual en términos estadísticos se considera una regresión de naturaleza lineal. En otras ocasiones, existen comportamientos en donde la primera variable aumenta y la segunda disminuye. En la imagen que vemos a continuación está el ejemplo de una regresión lineal entre dos variables. La primera una regresión lineal y la otra una regresión inversa.</p>
+                <div class="skill"><img src="Images/regre_exam_1.png" alt="regre_exam_1"><span>Ejemplo de Regresión Lineal</span></div>
+                <div class="skill"><img src="Images/regre_exam_2.png" alt="regre_exam_2"><span>Ejemplo de Regresión Inversa</span></div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Naturaleza Polinómica</h2>
+            <div class="skills-list">
+                <p>No siempre las regresiones se comportan de manera lineal. Existen otros fenómenos en la naturaleza que hacen que una variable actúe de maneras muy distintas al compararse con otra variable. Este tipo de comportamientos no lineales se conocen como regresiones polinómicas, en donde la variable dependiente toma valores diversos en ocasiones con un comportamiento “constante” pero en otras con una alta variabilidad. A continuación, dos ejemplos de regresiones polinómicas de segundo y tercer grado.</p>
+                <div class="skill"><img src="Images/regre_exam_3.png" alt="regre_exam_3"><span>Ejemplo de Regresión Grado 2</span></div>
+                <div class="skill"><img src="Images/regre_exam_4.png" alt="regre_exam_4"><span>Ejemplo de Regresión Grado 3</span></div>
+                <p>Para entender el concepto de grados, debemos pasar al ámbito matemático.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Grados de Polinomios</h2>
+            <div class="skills-list">
+                <p>La formulación matemática base de una regresión se puede definir como la suma de las multiplicaciones de la variable independiente elevadas al grado del polinomio por las constantes del polinomio formulado, siendo \(x\) la variable independiente, \(y\) la variable dependiente, \(β\) las contantes de la regresión e \(i\) el grado del polinomio.</p>
+                 <p>\(y = β_1(x^(i_1)) + β_2(x^(i_2)) + β_3(x^(i_3)) ... β_n(x^(i_n)) + c\)</p>
+                 <p>Volviendo a los ejemplos que vimos previamente, estos serian los polinomios para cada uno de ellos. En el caso de la regresión lineal e inversa ambas no tendrían un grado polinomial por lo que la variable independiente en ambos casos no se debe elevar a valores mayores a 1.</p>
+                 <div class="skill"><img src="Images/regre_exam_1.png" alt="regre_exam_1"><span>Ejemplo de Regresión Lineal para \(y = 0.5x\)</span></div>
+                 <div class="skill"><img src="Images/regre_exam_2.png" alt="regre_exam_2"><span>Ejemplo de Regresión Inversa \(y = 1000 - x\)</span></div>
+                 <p>En el caso de la regresion lineal vemos que a medida que \(x\) aumenta, la variable dependiente \(y\) hace un aumento de relación 0.5. Para la regresión inversa, \(x\) depende de una cosntantes \(c = 1000\) que al tener una operación de resta demuestra la disminución de la variable independiente \(y\).</p>
+                 <p>Ahora veamos el comportamiento de las variables polinomicas que vimos previamente.</p>
+                 <div class="skill"><img src="Images/regre_exam_3.png" alt="regre_exam_3"><span>Ejemplo de Regresión Grado 2 para \(y = 0.8x^2 + 5x + 200\)</span></div>
+                 <div class="skill"><img src="Images/regre_exam_4.png" alt="regre_exam_4"><span>Ejemplo de Regresión Grado 3 para \(y = 0.5x^3 - x^2 + 5x + 20\)</span></div>
+                 <p>Como se puede ver a medida que cambia el exponente del polinomio, las regresiones toman formas particulares. Esto es lo que finalmente permite a una regresión acomodarse al comportamiento de los datos desplegados entre las dos variables evaluadas.</p>
+                 <p>Ahora veamos cómo se puede aplicar esta estructura matemática al caso que estámos revisando.</p>
+                </div>
+        </section>
+        <section id="about">
+            <div>
+                <h1>Predicción con Gradio</h1>
+                <iframe src="https://2nisavi2-regretion-salary.hf.space/" width="100%" height="600px" style="border:none;"></iframe>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
